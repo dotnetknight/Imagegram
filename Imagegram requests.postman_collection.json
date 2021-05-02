@@ -1,0 +1,376 @@
+{
+	"info": {
+		"_postman_id": "cdde94fe-0e68-43d2-b4ee-efaec1a918b5",
+		"name": "Imagegram requests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Account",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Niko\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/Accounts",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Accounts"
+					]
+				},
+				"description": "Creates account in the system"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Account (cache)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "If-None-Match",
+						"value": "\"BA0759661CBA950374733657B01012F1\"",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:5001/api/Accounts/{AccountId}",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Accounts",
+						"{AccountId}"
+					]
+				},
+				"description": "Gets account from cache"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Account",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/api/Accounts/{AccountId}",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Accounts",
+						"{AccountId}"
+					]
+				},
+				"description": "Deletes account in the system\r\n"
+			},
+			"response": []
+		},
+		{
+			"name": "Root",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/vnd.marvin.hateoas+json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:5001/api",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api"
+					]
+				},
+				"description": "Gets root links for application\r\n"
+			},
+			"response": []
+		},
+		{
+			"name": "Create Post",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Account-Id",
+						"value": "40e20658-d07a-4119-a145-3b58bf418277",
+						"description": "Account id to authorize with",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "Image",
+							"type": "file",
+							"src": "/C:/Users/skott/Desktop/Capture.PNG"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/Posts",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Posts"
+					]
+				},
+				"description": "Creates new post in the system"
+			},
+			"response": []
+		},
+		{
+			"name": "Create Post (with link)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Account-Id",
+						"value": "e14643af-9d1b-4601-a4a7-4f8905bf0c18",
+						"description": "Account id to authorize with",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/vnd.marvin.hateoas+json",
+						"description": "Get links in the response",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "Image",
+							"type": "file",
+							"src": "/C:/Users/skott/Desktop/179978069_1375104836190872_9212843878821035447_n.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/Posts",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Posts"
+					]
+				},
+				"description": "Creates post in the system and returns links in response"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Posts (With link)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/vnd.marvin.hateoas+json",
+						"description": "Get links in the response",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:5001/api/Posts",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Posts"
+					]
+				},
+				"description": "Gets posts from system with links"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Posts (cache)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "If-None-Match",
+						"value": "\"C003259EB1FDCA984EEC8AB2CEA21A06\"",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:5001/api/Posts",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Posts"
+					]
+				},
+				"description": "Get posts form system\r\n"
+			},
+			"response": []
+		},
+		{
+			"name": "Comment on a post",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Account-Id",
+						"value": "40E20658-D07A-4119-A145-3B58BF418277",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"content\": \"string\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/Posts/2ABC1653-9C22-4415-9EAB-069EAA634C3D/Comments",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Posts",
+						"2ABC1653-9C22-4415-9EAB-069EAA634C3D",
+						"Comments"
+					]
+				},
+				"description": "Comment on a post"
+			},
+			"response": []
+		},
+		{
+			"name": "Get post by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/api/Posts/2abc1653-9c22-4415-9eab-069eaa634c3d",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Posts",
+						"2abc1653-9c22-4415-9eab-069eaa634c3d"
+					]
+				},
+				"description": "Gets post from system by id"
+			},
+			"response": []
+		},
+		{
+			"name": "Get post by id (with links)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "If-None-Match",
+						"value": "\"B9C72391D2BC59A5F72A5B6C9AB9E8FE\"",
+						"description": "ETag",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/vnd.marvin.hateoas+json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:5001/api/Posts/{PostId}",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Posts",
+						"{PostId}"
+					]
+				},
+				"description": "Get post by id (with links)"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Comments on post (cache)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "If-None-Match",
+						"value": "\"09D1CEB701CCC839F972EA555D01B493\"",
+						"description": "ETag",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:5001/api/Posts/2ABC1653-9C22-4415-9EAB-069EAA634C3D/Comments",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Posts",
+						"2ABC1653-9C22-4415-9EAB-069EAA634C3D",
+						"Comments"
+					]
+				},
+				"description": "Get comments to a post"
+			},
+			"response": []
+		}
+	]
+}
