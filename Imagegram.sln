@@ -3,23 +3,25 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Imagegram.API", "Imagegram.API\Imagegram.API.csproj", "{61CE0A32-97AB-4107-B04A-E618CCCD5C40}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Imagegram.API", "Imagegram.API\Imagegram.API.csproj", "{61CE0A32-97AB-4107-B04A-E618CCCD5C40}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{B0DDD8BA-FAB4-4FA8-8CC1-7DD1E556B77F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IoC", "IoC", "{709E77A9-C8E0-4D84-9D23-1A1BD063AE53}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Imagegram.Domain", "Imagegram.Domain\Imagegram.Domain.csproj", "{CDBB1C14-0A82-4C76-BA7C-E035EB45609B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Imagegram.Domain", "Imagegram.Domain\Imagegram.Domain.csproj", "{CDBB1C14-0A82-4C76-BA7C-E035EB45609B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Imagegram.Models", "Imagegram.Models\Imagegram.Models.csproj", "{B684B093-B941-4D23-940A-3F89AE7FDD59}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Imagegram.Models", "Imagegram.Models\Imagegram.Models.csproj", "{B684B093-B941-4D23-940A-3F89AE7FDD59}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Imagegram.Repository", "Imagegram.Repository\Imagegram.Repository.csproj", "{24876AC8-ED64-427F-AB1B-526759A416AC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Imagegram.Repository", "Imagegram.Repository\Imagegram.Repository.csproj", "{24876AC8-ED64-427F-AB1B-526759A416AC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Imagegram.Services", "Imagegram.Services\Imagegram.Services.csproj", "{E301F2D1-BAE8-42C0-8028-E5BB79836476}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Imagegram.Services", "Imagegram.Services\Imagegram.Services.csproj", "{E301F2D1-BAE8-42C0-8028-E5BB79836476}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Imagegram.Infrastructure", "Imagegram.Infrastructure\Imagegram.Infrastructure.csproj", "{55129007-6AA8-4BD6-A296-7505804EB18E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Imagegram.Infrastructure", "Imagegram.Infrastructure\Imagegram.Infrastructure.csproj", "{55129007-6AA8-4BD6-A296-7505804EB18E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Imagegram.IoC", "Imagegram.IoC\Imagegram.IoC.csproj", "{A406E491-6BA0-43B0-9B29-91BB46012FE8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Imagegram.IoC", "Imagegram.IoC\Imagegram.IoC.csproj", "{A406E491-6BA0-43B0-9B29-91BB46012FE8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Imagegram.Tests", "Imagegram.Tests\Imagegram.Tests.csproj", "{59B94BC7-B376-4FA0-8AD6-E587825D838C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -55,6 +57,10 @@ Global
 		{A406E491-6BA0-43B0-9B29-91BB46012FE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A406E491-6BA0-43B0-9B29-91BB46012FE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A406E491-6BA0-43B0-9B29-91BB46012FE8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59B94BC7-B376-4FA0-8AD6-E587825D838C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59B94BC7-B376-4FA0-8AD6-E587825D838C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59B94BC7-B376-4FA0-8AD6-E587825D838C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59B94BC7-B376-4FA0-8AD6-E587825D838C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
