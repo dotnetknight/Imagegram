@@ -32,10 +32,8 @@ namespace Imagegram.API.Controllers
         /// </summary>
         /// <param name="postsResourceParameters"></param>
         /// <response code="200">All posts from all users along with last 3 comments to each post</response>
-        /// <response code="404">Posts not found</response>
         [HttpGet(Name = "Posts")]
         [ProducesResponseType(typeof(PostQueryResponse), 200)]
-        [ProducesResponseType(typeof(ErrorModel), 404)]
         public async Task<ActionResult<PostQueryResponse>> Posts([FromQuery] PostsResourceParameters postsResourceParameters)
         {
             var result = await queryBus.ExecuteAsync<PostsQuery, PostsQueryResponse>(new PostsQuery(postsResourceParameters));
